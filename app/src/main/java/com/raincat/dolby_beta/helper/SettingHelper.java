@@ -99,6 +99,10 @@ public class SettingHelper {
     public static final String proxy_port_title = "代理端口（1~65535）";
     public static final int proxy_port_default = 23338;
 
+    public static final String proxy_Endpoint_key = "β_proxy_Endpoint_key";
+    public static final String proxy_Endpoint_title = "Endpoint";
+    public static final String proxy_Endpoint_default = "https://music.163.com";
+    
     public static final String proxy_original_key = "β_proxy_original_key";
     public static final String proxy_original_title = "代理源（空格隔开）";
     public static final String proxy_original_default = "kuwo qq kugou";
@@ -261,6 +265,15 @@ public class SettingHelper {
     public void setProxyOriginal(String original) {
         if (!TextUtils.isEmpty(original))
             sharedPreferences.edit().putString(SettingHelper.proxy_original_key, original).apply();
+    }
+
+    public String getProxyEndpoint() {
+        return sharedPreferences.getString(SettingHelper.proxy_Endpoint_key, SettingHelper.proxy_Endpoint_default);
+    }
+
+    public void setProxyEndpoint(String Endpoint) {
+        if (!TextUtils.isEmpty(Endpoint))
+            sharedPreferences.edit().putString(SettingHelper.proxy_Endpoint_key, Endpoint).apply();
     }
 
     public void setHttpProxy(String http) {
