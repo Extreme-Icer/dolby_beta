@@ -44,7 +44,7 @@ public class NeteaseSongListBean {
         private int code;
         private int expi;
         private String type;
-        private int gain;
+        private float gain;
         private int fee;
         private Object uf;
         private int payed;
@@ -53,6 +53,8 @@ public class NeteaseSongListBean {
         private FreeTrialInfoBean freeTrialInfo;
         private String level;
         private String encodeType;
+        private int peak;
+        private int time;
 
         public long getId() {
             return id;
@@ -118,11 +120,11 @@ public class NeteaseSongListBean {
             this.type = type;
         }
 
-        public int getGain() {
+        public float getGain() {
             return gain;
         }
 
-        public void setGain(int gain) {
+        public void setGain(float gain) {
             this.gain = gain;
         }
 
@@ -188,6 +190,22 @@ public class NeteaseSongListBean {
 
         public void setEncodeType(String encodeType) {
             this.encodeType = encodeType;
+        }
+
+        public int getPeak() {
+            return peak;
+        }
+
+        public void setPeak(int peak) {
+            this.peak = peak;
+        }
+
+        public int getTime() {
+            return time;
+        }
+
+        public void setTime(int time) {
+            this.time = time;
         }
 
         public static class FreeTrialInfoBean {

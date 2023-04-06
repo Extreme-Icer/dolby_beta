@@ -115,7 +115,8 @@ public class ScriptHelper {
                         Tools.showToastOnLooper(neteaseContext, "UnblockNeteaseMusic运行成功");
                     ExtraHelper.setExtraDate(ExtraHelper.SCRIPT_STATUS, "1");
                 } else if (line.equals("Killed ")) {
-                    startScript();
+                    if (SettingHelper.getInstance().getSetting(SettingHelper.proxy_master_key))
+                        startScript();
                 } else if (line.equals("RESTART")) {
                     ExtraHelper.setExtraDate(ExtraHelper.SCRIPT_STATUS, "0");
                 }
@@ -135,7 +136,7 @@ public class ScriptHelper {
         SSLContext sslContext = null;
         try {
             File ca = new File(getScriptPath(context) + File.separator + "ca.crt");
-            if (ca.exists()) {
+            if (!SettingHelper.getInstance().getSetting(SettingHelper.proxy_server_key) && ca.exists()) {
                 InputStream certificate = new FileInputStream(ca);
                 Certificate certificate1 = CertificateFactory.getInstance("X.509").generateCertificate(certificate);
                 KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());

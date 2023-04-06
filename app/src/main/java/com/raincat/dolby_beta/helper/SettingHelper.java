@@ -40,7 +40,7 @@ public class SettingHelper {
 
     public static final String listen_key = "β_listen_key";
     public static final String listen_title = "解锁一起听蒙面查看权限";
-    public static final String listen_sub = "开启后可直接查看对方信息，无需对方解除蒙面（暂时只支持8.6.45-8.7.70）";
+    public static final String listen_sub = "开启后可直接查看对方信息，无需对方解除蒙面（暂时只支持8.6.0-8.7.90）";
 
     public static final String fix_comment_key = "β_fix_comment_key";
     public static final String fix_comment_title = "修复评论区加载失败";
@@ -105,7 +105,7 @@ public class SettingHelper {
     
     public static final String proxy_original_key = "β_proxy_original_key";
     public static final String proxy_original_title = "代理源（空格隔开）";
-    public static final String proxy_original_default = "kuwo qq kugou";
+    public static final String proxy_original_default = "kuwo pyncmd";
 
     public static final String proxy_cover_key = "β_proxy_cover_key";
     public static final String proxy_cover_title = "重新释放脚本";
