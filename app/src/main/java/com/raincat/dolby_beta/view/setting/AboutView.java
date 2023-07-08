@@ -37,7 +37,7 @@ public class AboutView extends BaseDialogItem {
         setData(false, false);
 
         setOnClickListener(view -> {
-            Uri uri = Uri.parse("https://github.com/nining377/dolby_beta");
+            Uri uri = Uri.parse("https://github.com/LittleRey/dolby_beta");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             context.startActivity(intent);
         });
